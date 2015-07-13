@@ -109,3 +109,11 @@ inline float AbsDot(const Vector3& p_v1, const Vector3& p_v2)
 {
 	return fabsf(Dot(p_v1, p_v2));
 }
+
+//Cross Product
+inline Vector3 Cross(const Vector3& p_v1, const Vector3 p_v2)
+{
+	return Vector3(	(p_v1.y * p_v2.z) - (p_v1.z * p_v2.y),
+					(p_v1.z * p_v2.x) - (p_v1.x * p_v2.z),
+					(p_v1.x * p_v2.y) - (p_v1.y * p_v2.x) );
+}
